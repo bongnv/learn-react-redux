@@ -1,9 +1,12 @@
 const path = require('path');
+
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
     './js/app.jsx',
   ],
   output: {
@@ -38,6 +41,9 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: [
+          {
+            loader: 'react-hot-loader',
+          },
           {
             loader: 'babel-loader',
             options: {
