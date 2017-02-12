@@ -15,11 +15,10 @@ let todoId = 0;
 const todosReducers = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
-      todoId += 1;
       return [
         ...state,
         {
-          id: todoId,
+          id: todoId++,
           text: action.value,
           completed: false,
         },
