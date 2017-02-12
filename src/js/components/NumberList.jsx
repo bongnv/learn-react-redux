@@ -1,4 +1,6 @@
-export default function NumberList(props) {
+import React from 'react';
+
+const NumberList = (props) => {
   const numbers = props.numbers;
   return (
     <ul>
@@ -7,10 +9,10 @@ export default function NumberList(props) {
       )}
     </ul>
   );
-}
+};
 
 NumberList.propTypes = {
   numbers: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
 };
 
-const numbers = [1, 2, 3, 4, 5];
+export default NumberList;
