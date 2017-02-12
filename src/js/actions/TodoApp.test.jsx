@@ -8,5 +8,5 @@ describe('actions', () => {
       value: text,
     }
     expect(actions.addTodoAction(text)).toEqual(expectedAction)
-  })
-})
+  });
+});
