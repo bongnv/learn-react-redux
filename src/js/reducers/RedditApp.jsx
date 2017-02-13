@@ -8,7 +8,6 @@ const initialState = {
 };
 
 const redditAppReducer = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
     case ActionTypes.INVALIDATE:
       return Object.assign({}, state, {
